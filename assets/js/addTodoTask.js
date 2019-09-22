@@ -30,3 +30,8 @@ function createNewTaskInTodo() {
   addInputValueInLi();
   addLiInUl();
 }
+
+function createListElement() {
+  createNewTaskInTodo();
+  clearInput();
+}
