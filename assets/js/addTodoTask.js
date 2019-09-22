@@ -2,7 +2,7 @@
 
 const button = document.querySelector("#submitButton");
 const input = document.querySelector("#inputValue");
-const list = document.querySelector("ul");
+const ul = document.querySelector("ul");
 let li;
 
 function inputLength() {
@@ -11,6 +11,12 @@ function inputLength() {
 
 function clearInput() {
   input.value = "";
+}
+
+function firstLetterCapitalized() {
+  return (
+    input.value.charAt(0).toUpperCase() + input.value.substr(1).toLowerCase()
+  );
 }
 
 function createElementLi() {
@@ -22,7 +28,7 @@ function addInputValueInLi() {
 }
 
 function addLiInUl() {
-  list.insertAdjacentElement("beforeend", li);
+  ul.insertAdjacentElement("beforeend", li);
 }
 
 function createNewTaskInTodo() {
@@ -76,4 +82,4 @@ function checkCompletedLi(check) {
   }
 }
 
-list.addEventListener("click", checkCompletedLi);
+ul.addEventListener("click", checkCompletedLi);
