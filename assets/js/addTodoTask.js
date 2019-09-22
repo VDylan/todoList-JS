@@ -8,3 +8,7 @@ let li;
 function inputLength() {
   return input.value.length;
 }
+
+function clearInput() {
+  input.value = "";
+}
