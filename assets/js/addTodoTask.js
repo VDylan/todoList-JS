@@ -12,3 +12,7 @@ function inputLength() {
 function clearInput() {
   input.value = "";
 }
+
+function createElementLi() {
+  li = document.createElement("li");
+}
