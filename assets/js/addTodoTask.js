@@ -45,7 +45,7 @@ function createDeleteLiButton() {
   li.append(addDeleteButton);
 }
 
-function deleteLiButton() {
+function deleteLiButtonFunction() {
   let deleteLi = document.getElementsByClassName("deleteTask");
   let i;
   for (i = 0; i < deleteLi.length; i++) {
@@ -56,9 +56,15 @@ function deleteLiButton() {
   }
 }
 
+function deleteLiButton() {
+  createDeleteLiButton();
+  deleteLiButtonFunction();
+}
+
 function createListElement() {
   createNewTaskInTodo();
   clearInput();
+  deleteLiButton();
 }
 
 function addInputAfterLeftClick() {
