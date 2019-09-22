@@ -38,7 +38,7 @@ function createNewTaskInTodo() {
 }
 
 function createDeleteLiButton() {
-  let addDeleteButton = document.createElement("button");
+  let addDeleteButton = document.createElement("span");
   let deleteButtonIcon = document.createTextNode("\u00D7");
   addDeleteButton.className = "deleteTask";
   addDeleteButton.append(deleteButtonIcon);

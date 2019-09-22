@@ -1,12 +1,276 @@
-/* Check or Uncheck our Li, changing his background color and strike out text */
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+}
+
+/* Body parameters */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-image: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Dark Mode */
+#darkMode {
+  padding: 1rem;
+  width: 4rem;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+body.darkMode {
+  background-image: url("../images/darkMode-bg.jpg");
+  background-size: cover;
+}
+
+body.darkMode > section > div.header {
+  background-color: rgb(32, 32, 32);
+  color: rgb(255, 255, 255);
+}
+
+body.darkMode > section > ul {
+  color: #111;
+}
+
+body.darkMode > section > ul li {
+  background: #777;
+  color: #fff;
+}
+
+body.darkMode > section > ul li:nth-child(odd) {
+  background: #3d3d3d;
+}
+
+body.darkMode > section > ul li:hover {
+  background: #2e2e2e;
+}
+
+body.darkMode > section > ul li.checked {
+  background: rgb(0, 0, 0);
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Section parameters */
+section {
+  width: 100%;
+}
+
+/* Style the list items */
+ul li {
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 1.8rem;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+
+  /* make the list items unselectable */
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
 ul li.checked {
   background: #888;
   color: #fff;
   text-decoration: line-through;
 }
 
-/* Changing all color when we set in Dark Mode or Light Mode */
-body.darkMode {
-  background-color: #111;
-  color: #eee;
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: "";
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Style the close button */
+.deleteTask {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+  font-size: 2rem;
+}
+
+.deleteTask:hover {
+  background-color: #36b8f4;
+  color: white;
+}
+
+/* Style the header */
+.header {
+  background-color: #36b8f4;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+.header h1 {
+  margin-bottom: 2rem;
+  font-size: 6vw;
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+input {
+  border: none;
+  border-radius: 0;
+  width: 50%;
+  padding: 10px;
+  float: left;
+  font-size: 1.5rem;
+}
+
+/* Style the "Add" button */
+#submitButton {
+  padding: 1rem;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+#submitButton:hover {
+  background-color: #bbb;
+}
+
+@media screen and (min-width: 450px) and (max-width: 700px) {
+  .header h1 {
+    font-size: 6.5vw;
+  }
+
+  input {
+    width: 63%;
+  }
+
+  #submitButton {
+    width: 20%;
+  }
+}
+
+
+
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+  section {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    width: 50%;
+  }
+
+  .header {
+    padding: 30px 15px;
+  }
+
+  .header h1 {
+    font-size: 3.5vw;
+  }
+
+  input {
+    width: 60%;
+  }
+
+  #submitButton {
+    width: 20%;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1250px) {
+  section {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    width: 50%;
+  }
+
+  .header {
+    padding: 30px 15px;
+  }
+
+  .header h1 {
+    font-size: 3.5vw;
+  }
+
+  input {
+    width: 67%;
+  }
+
+  #submitButton {
+    width: 20%;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  section {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    width: 50%;
+  }
+
+  .header {
+    padding: 30px 15px;
+  }
+
+  .header h1 {
+    font-size: 3.5vw;
+  }
+
+  input {
+    width: 70%;
+  }
+
+  #submitButton {
+    width: 20%;
+  }
 }

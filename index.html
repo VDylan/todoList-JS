@@ -9,18 +9,17 @@
   </head>
   <body>
     <section>
-      <h2>What I need to do this week ?</h2>
+      <div id="myDIV" class="header">
+        <h1>What I need to do this week ?</h1>
+        <input type="text" id="inputValue" placeholder="Enter a task" />
+        <button id="submitButton">Confirm</button>
+        <button id="darkMode">🌙</button>
+      </div>
 
-      <button id="darkMode">🌙</button>
-
-      <input type="text" id="inputValue" placeholder="Enter a task" />
-
-      <button id="submitButton">Confirm</button>
-
-      <ul></ul>
-
-      <script src="assets/js/addTodoTask.js"></script>
-      <script src="assets/js/darkMode.js"></script>
+      <ul id="myUL"></ul>
     </section>
+
+    <script src="assets/js/addTodoTask.js"></script>
+    <script src="assets/js/darkMode.js"></script>
   </body>
 </html>
