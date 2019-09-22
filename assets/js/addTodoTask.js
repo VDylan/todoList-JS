@@ -24,3 +24,9 @@ function addInputValueInLi() {
 function addLiInUl() {
   ul.insertAdjacentElement("beforeend", li);
 }
+
+function createNewTaskInTodo() {
+  createElementLi();
+  addInputValueInLi();
+  addLiInUl();
+}
