@@ -20,3 +20,7 @@ function createElementLi() {
 function addInputValueInLi() {
   li.append(document.createTextNode(firstLetterCapitalized()));
 }
+
+function addLiInUl() {
+  ul.insertAdjacentElement("beforeend", li);
+}
