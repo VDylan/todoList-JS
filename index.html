@@ -7,10 +7,10 @@
     <title>My Todo List</title>
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body>
+  <body id="body" class="lightMode">
     <section>
       <h2>What I need to do this week ?</h2>
-      <button type="button" name="dark_light" onclick="toggleTheme()" title="Toggle dark/light mode">🌛</button>
+      <input type="button" value="Dark Mode" onclick="changeTheme(this)"></input>
       <input type="text" id="inputValue" placeholder="Enter a task" />
       <button id="submitButton">Confirm</button>
       <ul></ul>

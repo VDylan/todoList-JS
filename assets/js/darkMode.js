@@ -1,5 +1,11 @@
-function toggleTheme() {
-  let body = document.getElementById("body");
-  let currentClass = body.className;
-  body.className = currentClass == "dark-mode" ? "light-mode" : "dark-mode";
-}
+function changeTheme(buttonText) {
+    var body = document.getElementById("body");
+    var currentClass = body.className;
+    body.className = currentClass == "lightMode" ? "darkMode" : "lightMode";
+  
+    if (buttonText.value === "Dark Mode") {
+      buttonText.value = "Light Mode";
+    } else {
+      buttonText.value = "Dark Mode";
+    }
+  }
