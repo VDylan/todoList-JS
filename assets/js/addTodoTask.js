@@ -22,7 +22,7 @@ function addInputValueInLi() {
 }
 
 function addLiInUl() {
-  ul.insertAdjacentElement("beforeend", li);
+  list.insertAdjacentElement("beforeend", li);
 }
 
 function createNewTaskInTodo() {
@@ -76,4 +76,4 @@ function checkCompletedLi(check) {
   }
 }
 
-ul.addEventListener("click", checkCompletedLi);
+list.addEventListener("click", checkCompletedLi);
