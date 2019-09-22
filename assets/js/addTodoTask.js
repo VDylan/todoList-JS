@@ -75,3 +75,5 @@ function checkCompletedLi(check) {
     check.target.classList.toggle("checked");
   }
 }
+
+ul.addEventListener("click", checkCompletedLi);
