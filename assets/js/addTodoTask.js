@@ -69,3 +69,9 @@ function addInputAfterKeypressEnter(key) {
 
 button.addEventListener("click", addInputAfterLeftClick);
 input.addEventListener("keypress", addInputAfterKeypressEnter);
+
+function checkCompletedLi(check) {
+  if (check.target.tagName === "LI") {
+    check.target.classList.toggle("checked");
+  }
+}
