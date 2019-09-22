@@ -1,11 +1,9 @@
-function changeTheme(buttonText) {
-    var body = document.getElementById("body");
-    var currentClass = body.className;
-    body.className = currentClass == "lightMode" ? "darkMode" : "lightMode";
-  
-    if (buttonText.value === "Dark Mode") {
-      buttonText.value = "Light Mode";
-    } else {
-      buttonText.value = "Dark Mode";
-    }
+const darkMode = document.querySelector("#darkMode");
+
+function changeTheme(ev) {
+  if (ev.target.tagName === "BUTTON") {
+    document.body.classList.toggle("darkMode");
   }
+}
+
+darkMode.addEventListener("click", changeTheme);

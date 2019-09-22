@@ -7,13 +7,18 @@
     <title>My Todo List</title>
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body id="body" class="lightMode">
+  <body>
     <section>
       <h2>What I need to do this week ?</h2>
-      <input type="button" value="Dark Mode" onclick="changeTheme(this)" id="themeDarkLight"></input>
+
+      <button id="darkMode">🌙</button>
+
       <input type="text" id="inputValue" placeholder="Enter a task" />
+
       <button id="submitButton">Confirm</button>
+
       <ul></ul>
+
       <script src="assets/js/addTodoTask.js"></script>
       <script src="assets/js/darkMode.js"></script>
     </section>
