@@ -47,3 +47,5 @@ function addInputAfterKeypressEnter(key) {
     createListElement();
   }
 }
+
+button.addEventListener("click", addInputAfterLeftClick);
