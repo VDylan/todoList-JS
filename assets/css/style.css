@@ -1,7 +1,31 @@
 /* Check or Uncheck our Li, changing his background color and strike out text */
 ul li.checked {
-    background: #888;
-    color: #fff;
-    text-decoration: line-through;
-  }
-  
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Changing all color when we set in Dark Mode or Light Mode */
+body.dark-mode {
+  background-color: #111;
+  color: #eee;
+}
+body.dark-mode a {
+  color: #111;
+}
+body.dark-mode button {
+  background-color: #eee;
+  color: #111;
+}
+
+body.light-mode {
+  background-color: #eee;
+  color: #111;
+}
+body.light-mode a {
+  color: #111;
+}
+body.light-mode button {
+  background-color: #111;
+  color: #eee;
+}
