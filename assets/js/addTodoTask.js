@@ -49,3 +49,4 @@ function addInputAfterKeypressEnter(key) {
 }
 
 button.addEventListener("click", addInputAfterLeftClick);
+input.addEventListener("keypress", addInputAfterKeypressEnter);
