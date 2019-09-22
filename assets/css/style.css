@@ -7,20 +7,29 @@ ul li.checked {
 
 /* Changing all color when we set in Dark Mode or Light Mode */
 body.darkMode {
-    background-color: #111;
-    color: #eee;
-  }
-  body.darkMode button {
-    background-color: #eee;
-    color: #111;
-  }
-  
-  body.lightMode {
-    background-color: #eee;
-    color: #111;
-  }
-  body.lightMode button {
-    background-color: #111;
-    color: #eee;
-  }
-  
+  background-color: #111;
+  color: #eee;
+}
+body.darkMode button {
+  background-color: #eee;
+  color: #111;
+}
+
+body.darkMode #themeDarkLight {
+  background-color: #eee;
+  color: #111;
+}
+
+body.lightMode {
+  background-color: #eee;
+  color: #111;
+}
+body.lightMode button {
+  background-color: #111;
+  color: #eee;
+}
+
+body.lightMode #themeDarkLight {
+  background-color: #111;
+  color: #eee;
+}
