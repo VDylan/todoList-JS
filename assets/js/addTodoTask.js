@@ -31,6 +31,14 @@ function createNewTaskInTodo() {
   addLiInUl();
 }
 
+function createDeleteLiButton() {
+  let addDeleteButton = document.createElement("button");
+  let deleteButtonIcon = document.createTextNode("\u00D7");
+  addDeleteButton.className = "deleteTask";
+  addDeleteButton.append(deleteButtonIcon);
+  li.append(addDeleteButton);
+}
+
 function createListElement() {
   createNewTaskInTodo();
   clearInput();
