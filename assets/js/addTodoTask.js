@@ -41,3 +41,9 @@ function addInputAfterLeftClick() {
     createListElement();
   }
 }
+
+function addInputAfterKeypressEnter(key) {
+  if (inputLength() > 0 && key.keyCode === 13) {
+    createListElement();
+  }
+}
