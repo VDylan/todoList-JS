@@ -39,6 +39,17 @@ function createDeleteLiButton() {
   li.append(addDeleteButton);
 }
 
+function deleteLiButton() {
+  let deleteLi = document.getElementsByClassName("deleteTask");
+  let i;
+  for (i = 0; i < deleteLi.length; i++) {
+    deleteLi[i].onclick = function() {
+      let div = this.parentElement;
+      div.remove();
+    };
+  }
+}
+
 function createListElement() {
   createNewTaskInTodo();
   clearInput();
