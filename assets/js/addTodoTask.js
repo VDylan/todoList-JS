@@ -16,3 +16,7 @@ function clearInput() {
 function createElementLi() {
   li = document.createElement("li");
 }
+
+function addInputValueInLi() {
+  li.append(document.createTextNode(firstLetterCapitalized()));
+}
