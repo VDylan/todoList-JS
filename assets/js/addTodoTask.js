@@ -35,3 +35,9 @@ function createListElement() {
   createNewTaskInTodo();
   clearInput();
 }
+
+function addInputAfterLeftClick() {
+  if (inputLength() > 0) {
+    createListElement();
+  }
+}
